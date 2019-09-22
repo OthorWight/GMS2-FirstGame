@@ -14,6 +14,9 @@ if (keyboard_check(vk_up) or keyboard_check(ord("W"))){
 
 if (keyboard_check(vk_shift)){
 	motion_add(image_angle, -0.05)
+	if (speed <= 0.1){
+		motion_set(image_angle, 0)	
+	}
 }
 
 move_wrap(true,true,sprite_width/2)
